@@ -1,0 +1,23 @@
+{
+  "name": "mongotest",
+  "version": "1.0.0",
+  "description": "A mongo test",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibouvousaime/mongodbtesting.git"
+  },
+  "keywords": [
+    "mongo",
+    "test"
+  ],
+  "author": "Ibrahima Sarr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibouvousaime/mongodbtesting/issues"
+  },
+  "homepage": "https://github.com/ibouvousaime/mongodbtesting#readme"
+}

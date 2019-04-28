@@ -1,0 +1,40 @@
+//var mongojs = require('mongojs');
+var MongoClient = require('mongodb').MongoClient;
+JSONStream = require('JSONStream')
+var connectionString = "mongodb+srv://ab_ibrahima:FR2DwqIROWHmLlgX@cluster0-zl8ja.mongodb.net/data_sample";
+
+
+MongoClient.connect(connectionString,function (err,db) {
+    if (err) throw err;
+    var d_b = db.db('sample_geospacial');
+    //console.log(d_b)
+    //console.log(db.collection('companies').find(qty: { $gt: 4 } }));
+    var keys = d_b.collection('shipwrecks');
+    keys.find({}).toArray(function (err, result) {
+	if (err){
+	    console.log("error : " + err);
+	}
+	else if (result.length) {
+            console.log(result)
+	} else {
+            console.log('No documents found');
+	}
+    });
+    //Close connection
+    d_b.close();
+});
+    /* var t = keys.find().sort({name: 1}, function (err, docs) {
+	console.log(docs)
+    });*/
+//    console.log(t);
+    /*var keys = d_b.collection("listingsAndReviews").find({}).toArray(function(err, result) {
+	if (err) throw err;
+	console.log(result);
+	db.close();
+    });
+    //console.log(keys);
+    /* for (var k of keys) {
+	console.log(k);
+    }
+});
+*/
